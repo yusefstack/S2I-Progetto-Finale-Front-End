@@ -32,6 +32,9 @@
       @media (max-width: $layout-breakpoint-xsmall) {
         font-size: 4rem;
       }
+      @media (max-width: $layout-breakpoint-medium) {
+        font-size: 9rem;
+      }
     }
     .row-col {
       width: 50%;

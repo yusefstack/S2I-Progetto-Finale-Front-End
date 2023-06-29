@@ -1,17 +1,18 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { useSelector } from 'react-redux'
+import { Outlet } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 
 const SharedLayout = () => {
-    const homeIsLoading = useSelector(state => state.homeLoader.homeIsLoading)
+    const location = useLocation()
 
     return (
         <>
-            {homeIsLoading ? <></> : <Navbar />}
+            {location.pathname !== "/experience" && <Navbar key={uuidv4()}/>}
             <Outlet />
-            {homeIsLoading ? <></> : <Footer />}
+            {location.pathname !== "/experience" && <Footer key={uuidv4()} />}
         </>
     )
 }

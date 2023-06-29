@@ -10,7 +10,7 @@ export default {
     },
     fontSize: {
       '10xl': '13rem',
-    }
+    },
   },
   },
   plugins: [],

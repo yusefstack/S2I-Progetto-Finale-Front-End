@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import lettera from "../images/HEADER-IMAGES/lettera-o.png"
 
-const gigio = () => {
+const ExperiencePath = () => {
 
     const cardVariants = {
         offscreen: {
@@ -22,20 +23,20 @@ const gigio = () => {
     return (
     <>
         <motion.div
-            className="card-container"
+            className="card-container mt-96 mb-52"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}
         >
             <motion.div variants={cardVariants}>
-                <div>
-                    <h1 className='relative text-justify text-blue-300 text-10xl whitespace-break-spaces max-md:text-center max-md:text-6xl'>SO WHY WE RUIN OUR WORLD?</h1>
-                    <img className='w-80 absolute bottom-16 left-32' src={lettera} alt="" />
-                </div>
+                <h1 className='relative text-blue-300 text-9xl text-center whitespace-break-spaces max-md:text-center max-xl:text-7xl'>SO WHY WE RUIN OUR W<img className='w-28 inline-block max-md:w-14 max-xl:w-14' src={lettera} alt="" />RLD?</h1>
             </motion.div>
         </motion.div>
+        <Link to="/experience" className="request-loader m-auto mb-96">
+            <h1 className='text-5xl'>explore</h1>
+        </Link>
     </>
     )
 }
 
-export default gigio
+export default ExperiencePath

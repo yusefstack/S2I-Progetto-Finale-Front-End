@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { v4 as uuidv4 } from 'uuid';
 
 const banner = {
   animate: {
@@ -22,13 +23,7 @@ const letterAni = {
 };
 
 const Banner = () => {
-  const [playMarquee, setPlayMarquee] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setPlayMarquee(true);
-    }, 2000);
-  }, []);
+  
   return (
     <motion.div className='banner' variants={banner}>
       <BannerRowTop title={"Beatiful"} />
@@ -40,14 +35,17 @@ const Banner = () => {
 
 const AnimatedLetters = ({ title, disabled }) => (
   <motion.span
-    className='row-title'
-    variants={disabled ? null : banner}
-    initial='initial'
-    animate='animate'>
+      className='row-title'
+      variants={disabled ? null : banner}
+      initial='initial'
+      animate='animate'
+      >
     {[...title].map((letter) => (
       <motion.span
-        className='row-letter'
-        variants={disabled ? null : letterAni}>
+          className='row-letter'
+          variants={disabled ? null : letterAni}
+          key={uuidv4()}
+        >
         {letter}
       </motion.span>
     ))}
@@ -61,14 +59,15 @@ const BannerRowTop = ({ title }) => {
         <AnimatedLetters title={title} />
       </div>
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          ease: "easeInOut",
-          duration: 1,
-          delay: 0.4,
-        }}
-        className='row-col'>
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 0.4,
+          }}
+          className='row-col'
+      >
       </motion.div>
     </div>
   );
@@ -78,28 +77,31 @@ const BannerRowBottom = ({ title }) => {
   return (
     <div className={"banner-row center"}>
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ ease: "easeInOut", duration: 1, delay: 1 }}
-        className='scroll'>
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ ease: "easeInOut", duration: 1, delay: 1 }}
+          className='scroll'
+        >
         <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.8,
-          }}>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+        >
           scroll
         </motion.span>
         <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: "easeInOut",
-            duration: 1,
-            delay: 1.8,
-          }}>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+          >
           down
         </motion.span>
       </motion.div>
