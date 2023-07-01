@@ -29,11 +29,15 @@
       display: inline-block;
       white-space: nowrap;
       color: rgb(147, 197, 253);
-      @media (max-width: $layout-breakpoint-xsmall) {
-        font-size: 4rem;
+      
+      @media (min-width: 0px){
+        font-size: 5rem;
       }
-      @media (max-width: $layout-breakpoint-medium) {
+      @media (min-width: $layout-breakpoint-xsmall){
         font-size: 9rem;
+      }
+      @media (min-width: $layout-breakpoint-medium){
+        font-size: 20rem;
       }
     }
     .row-col {

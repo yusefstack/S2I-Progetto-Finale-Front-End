@@ -29,7 +29,7 @@ const ExperiencePath = () => {
             viewport={{ once: true, amount: 0.8 }}
         >
             <motion.div variants={cardVariants}>
-                <h1 className='relative text-blue-300 text-9xl text-center whitespace-break-spaces max-md:text-center max-xl:text-7xl'>SO WHY WE RUIN OUR W<img className='w-28 inline-block max-md:w-14 max-xl:w-14' src={lettera} alt="" />RLD?</h1>
+                <h1 className='relative text-blue-300 text-9xl text-center whitespace-break-spaces max-md:text-center max-xl:text-7xl max-sm:text-4xl max-sm:px-12'>SO WHY WE RUIN OUR W<img className='w-28 inline-block max-md:w-14 max-xl:w-14 max-sm:w-9' src={lettera} alt="" />RLD?</h1>
             </motion.div>
         </motion.div>
         <Link to="/experience" className="request-loader m-auto mb-96">

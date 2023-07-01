@@ -66,15 +66,15 @@ const Loader = ({ setLoading }) => {
           exit="exit"
           className="loader-inner"
         >
-        <ImageBlock variants={item} imageNumber={ImageOne} className="absolute w-128 right-12 bottom-3" />
+        <ImageBlock variants={item} imageNumber={ImageOne} className="absolute w-128 right-12 bottom-3 max-xl:right-32 max-md:w-96 md:-bottom-36 md:-left-24 max-xl:bottom-52" />
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
               layoutId="main-image-1"
               src={ImageTwo}
           />
         </motion.div>
-        <ImageBlock className="absolute w-128 left-24 max-md:w-96 max-md:left-56 max-md:top-24" variants={item} imageNumber={ImageTree}/>
-        <ImageBlock className="absolute w-128 left-96 max-md:w-96" variants={item} imageNumber={ImageFour} />
+        <ImageBlock className="absolute w-128 left-24 max-md:w-96 max-md:left-56 md:top-12 md:-left-24 max-md:top-72" variants={item} imageNumber={ImageTree}/>
+        <ImageBlock className="absolute w-128 left-96 max-md:w-96 max-xl:left-32 md:bottom-96 md:left-96 max-xl:bottom-96" variants={item} imageNumber={ImageFour} />
         <ImageBlock className="absolute w-128 right-48 max-md:w-96" variants={item} imageNumber={ImageFive} />
       </motion.div>
     </motion.div>

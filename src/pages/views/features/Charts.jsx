@@ -76,7 +76,7 @@ const Charts = () => {
             }} 
             className='my-80 max-lg:my-0'
         >
-            <div className='bg-blue-200 w-2/4 h-24 rounded-full right-14 m-auto -top-32 mb-32 max-md:w-5/6'>
+            <div className='bg-blue-200 w-2/4 h-24 rounded-full right-14 m-auto -top-32 mb-32 max-md:w-full'>
                 <div className='flex justify-around pt-8 text-xl m-auto'>
                     <button className='hover:text-orange-400 text-blue-800 text-2xl max-md:text-xl' onClick={handleClick} value="temperature">Temperature</button>
                     <button className='hover:text-orange-400 text-blue-800 text-2xl max-md:text-xl' onClick={handleClick} value="co2">CO2</button>
@@ -87,7 +87,8 @@ const Charts = () => {
             </div>
             <div className='relative rounded-3xl'>
                 <img className='absolute -top-28 left-14 max-lg:-top-22 max-lg:-left-24 max-xl:hidden' src={sfondo} alt="" />
-                <LineChart className='m-auto max-xl:bg-blue-200 max-lg:rotate-90 max-xl:rounded-3xl my-96' width={width < 500 ? 400 : 850} height={width < 500 ? 300 : 500} data={graphicData}>
+                <p className='absolute rotate-90 text-5xl -left-32 bottom-2/4 text-orange-300 lg:hidden'>rotate the screen <span class="material-symbols-outlined">screen_rotation</span></p>
+                <LineChart className='m-auto max-xl:bg-blue-200 max-lg:rotate-90 max-xl:rounded-3xl my-96' width={width < 500 ? 400 : 850} height={width < 500 ? 200 : 500} data={graphicData}>
                     <Line
                         type="monotone"
                         dataKey={lineDataKey}
