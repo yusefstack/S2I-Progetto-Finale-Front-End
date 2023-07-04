@@ -6,7 +6,7 @@ Questa web app è stata realizzata al fine di dimostrare l'assimilazione delle c
 
 ## Reperibilità
 
-la web app è disponibile al seguente URL 
+la web app è disponibile al seguente URL https://progettoglobalwarning.netlify.app/
 
 ## Autori
 
