@@ -16,7 +16,7 @@ const Footer = () => {
         }}
         className="my-4 w-2/4 m-auto bg-blue-500 rounded-3xl shadow md:flex md:items-center md:justify-between md:p-6 max-sm:w-5/6 max-sm:h-24 max-sm:p-3"
     >
-		<span className="text-md m-auto text-blue-200 text-center">© 2023 <a href="https://flowbite.com" className="hover:underline" target="_blank">Global War(n)ing!™</a>. All Rights Reserved.
+		<span className="text-md m-auto text-blue-200 text-center">© 2023 <a href="https://progettoglobalwarning.netlify.app" className="hover:underline" target="_blank">Global War(n)ing!™</a>. All Rights Reserved.
     </span>
 	</motion.div>
   )
